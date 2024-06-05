@@ -32,7 +32,7 @@
     ],
     "servers": [
       {
-        "address": "https://8.8.8.8/dns-query",
+        "address": "https://8.8.4.4/dns-query",
         "tag": "remote"
       },
       {
@@ -67,17 +67,28 @@
   "inbounds": [
     {
       "auto_route": true,
+      "domain_strategy": "prefer_ipv6",
       "exclude_package": [
         "com.android.captiveportallogin",
         "com.biglybt.android.client",
         "com.bittorrent.client",
+        "com.bittorrent.client.pro",
+        "com.infomaniak.meet",
+        "com.psiphon3",
+        "com.psiphon3.subscription",
         "com.utorrent.client",
+        "com.utorrent.client.pro",
+        "ie.equalit.ceno",
         "org.jitsi.meet",
         "org.onionshare.android",
+        "org.onionshare.android.fdroid",
         "org.openobservatory.ooniprobe",
         "org.proninyaroslav.libretorrent",
         "org.torproject.android",
-        "org.torproject.torbrowser"
+        "org.torproject.torbrowser",
+        "org.torproject.torbrowser_alpha",
+        "pan.alexander.tordnscrypt",
+        "pan.alexander.tordnscrypt.stable"
       ],
       "gso": true,
       "inet4_address": "172.19.0.1/30",
@@ -90,14 +101,20 @@
         }
       },
       "sniff": true,
+      "sniff_override_destination": true,
       "strict_route": true,
       "type": "tun"
     },
     {
+      "domain_strategy": "prefer_ipv6",
       "listen": "::",
       "listen_port": 7890,
       "sniff": true,
-      "type": "mixed"
+      "sniff_override_destination": true,
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "type": "mixed",
+      "udp_fragment": true
     }
   ],
   "log": {
@@ -106,7 +123,7 @@
   },
   "ntp": {
     "detour": "direct",
-    "enabled": false,
+    "enabled": true,
     "server": "pool.ntp.org"
   },
   "outbounds": [
