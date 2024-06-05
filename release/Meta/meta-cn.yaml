@@ -46,13 +46,23 @@ tun:
   - com.android.captiveportallogin
   - com.biglybt.android.client
   - com.bittorrent.client
+  - com.bittorrent.client.pro
+  - com.infomaniak.meet
+  - com.psiphon3
+  - com.psiphon3.subscription
   - com.utorrent.client
+  - com.utorrent.client.pro
+  - ie.equalit.ceno
   - org.jitsi.meet
   - org.onionshare.android
+  - org.onionshare.android.fdroid
   - org.openobservatory.ooniprobe
   - org.proninyaroslav.libretorrent
   - org.torproject.android
   - org.torproject.torbrowser
+  - org.torproject.torbrowser_alpha
+  - pan.alexander.tordnscrypt
+  - pan.alexander.tordnscrypt.stable
 
 dns:
   enable: true
@@ -64,12 +74,12 @@ dns:
     - "tls://223.5.5.5:853"
   proxy-server-nameserver:
     - "https://1.1.1.1/dns-query"
-    - "https://8.8.8.8/dns-query"
+    - "https://8.8.4.4/dns-query"
     - "tls://9.9.9.11:8853"
     - "tls://223.5.5.5:853"
   nameserver:
     - "https://1.1.1.1/dns-query#default"
-    - "https://8.8.8.8/dns-query#default"
+    - "https://8.8.4.4/dns-query#default"
     - "https://9.9.9.11:5053/dns-query#default"
     - "https://185.222.222.222/dns-query#default"
   nameserver-policy:
