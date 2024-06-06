@@ -11,23 +11,25 @@
         "server": "direct"
       },
       {
-        "rule_set": [
-          "geosite-private",
-          "geosite-ir"
-        ],
-        "server": "direct"
-      },
-      {
         "disable_cache": true,
         "rule_set": [
+          "geoip-malware",
+          "geoip-phishing",
           "geosite-category-ads-all",
           "geosite-cryptominers",
           "geosite-malware",
-          "geosite-phishing",
-          "geoip-malware",
-          "geoip-phishing"
+          "geosite-phishing"
         ],
         "server": "block"
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geoip-private",
+          "geosite-ir",
+          "geosite-private"
+        ],
+        "server": "direct"
       }
     ],
     "servers": [
@@ -227,28 +229,23 @@
         "protocol": "dns"
       },
       {
-        "outbound": "direct",
-        "rule_set": [
-          "geosite-private",
-          "geoip-private"
-        ]
-      },
-      {
         "outbound": "block",
         "rule_set": [
+          "geoip-malware",
+          "geoip-phishing",
           "geosite-category-ads-all",
           "geosite-cryptominers",
           "geosite-malware",
-          "geosite-phishing",
-          "geoip-malware",
-          "geoip-phishing"
+          "geosite-phishing"
         ]
       },
       {
         "outbound": "direct",
         "rule_set": [
+          "geoip-ir",
+          "geoip-private",
           "geosite-ir",
-          "geoip-ir"
+          "geosite-private"
         ]
       }
     ]
